@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=IBM+Plex+Mono&family=Luxurious+Roman&family=Mochiy+Pop+P+One&family=Neonderthaw&family=Oswald&family=Roboto:wght@900&family=Rubik+Beastly&family=Ubuntu&display=swap');
+
+
+
+
+header{
+    background-image: url('/assets/images/piano-g1e23bdd6d_1280.jpg');
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+nav{
+    margin: 50px;
+    
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+nav ul li{
+    transition: transform 0.3s ease-in;
+}
+
+nav li:hover{
+    transform: scale(0.9);
+
+}
+
+nav span{
+    font-family: 'Luxurious Roman';
+    font-size: 40px;
+    font-weight: bold;
+    transition: scale 0.4s ease-in;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+nav span.white{
+    color: #F1F1F1;
+    background-color: rgba(0, 0, 0, 1);
+
+}
+
+nav span.black{
+    color: #000;
+    background-color: rgba(255, 255, 255, 1);
+
+}
+
+
+
+header .title{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);  
+}
+
+header .title h1{
+    margin-bottom: 10px;
+    font-size: 5rem;
+    font-family: 'Oswald';
+    transform: skew(5deg);
+}
+
+.title h1 span.white{
+    color: #F1F1F1;
+}
+
+.title h1 span.black{
+    color: brown;
+}
+
+button{
+    padding: 1rem 2rem;
+    margin: 0 140px;
+    font-family: 'Luxurious Roman', sans-serif;
+    font-size: 1.7em;
+    border: 3px inset black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.title #btn-black{
+    background-color: rgba(0, 0, 0, 0.5);  
+    color: #F1F1F1;
+}
+
+.title #btn-black:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+
+}
+
+.title #btn-white{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+
+}
+
+.title #btn-white:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #F1F1F1;  
+
+}
+
+.title .adress{
+    color: white;
+}
+
+@media screen and (max-width: 990px) {
+    header li span{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    header ul{
+        flex-direction: column;
+    }
+
+    header ul li{
+        margin: 20px 0;
+    }
+
+    .title span{
+        font-size: 9vw;
+    }
+}
+
+
+/* PARALLAX */
+
+section.parallax{
+    background-image: url('/assets/images/ball-gf3fa46c03_1280.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    height: 30vh;
+}
+
+/* SECTION CARDS */
+
+section.cards{
+    background: url('/assets/images/pattern-gda5379a38_640.jpg');
+    height: 90vh;
+}
+
+
+.threecards{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.cards .second-title{
+    color: rgb(62, 25, 25);
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Luxurious Roman', sans-serif;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-shadow: 5px 5px 10px black;   
+}
+
+@media screen and (max-width: 375px) {
+    h2{
+        font-size: 25px;
+    }
+}
+
+.card{
+    height: 75%;
+    width: 300px;
+    line-height: 66px;
+    text-align: center;
+    margin: 0 auto;
+    border: 3px solid #000;
+    border-radius: 3px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card-title{
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: 'Luxurious Roman', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 100px;
+    border-bottom: 1px solid black;
+    transition: all 0.3s ease-in;
+}
+
+.card-title:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #F1F1F1;
+}
+
+.card-item{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 2px dashed #000;
+    font-style: oblique;
+    font-weight: bold;
+    color: #F1F1F1;
+    font-size: 25px;
+    transition: all 0.3s ease-in;
+}
+
+.card-item:last-child{
+    border-bottom: none;
+}
+
+.card-item:hover{
+    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+    transform: scale(1.1);
+}
+
+.item2, .item4{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+}
+
+.item2:hover, .item4:hover{
+    background-color: darkblue;
+    opacity: 0.5;
+    color: #F1F1F1;
+}
+
+@media screen and (max-width: 1080px) {
+    section.cards{
+        height: 140vh;
+    }
+
+    .threecards{
+        flex-direction: column;
+    }
+
+    section.cards .card{
+        margin-top: 20px;
+    }
+
+   
+}
+
+
+
+/* SECOND PARALLAX */
+
+section.secondParallax{
+    background-image: url('/assets/images/retro-couple-gb64fa1d8e_1280.png');
+    background-attachment: fixed;
+    background-size: cover;
+    height: 30vh;
+}
+
+/* FOOTER */
+
+
+footer{
+    background: url('/assets/images/grades-gd84548cfb_1280.jpg');
+    height: 45vh;
+    width: 100%;
+    font-family: 'Roboto:wght@900', sans-serif;
+    color: white;
+    padding: 20px;
+}
+
+.footer-top .columns{
+    display: flex;
+    justify-content: space-around;
+}
+
+.column p.title-footer{
+    margin: 25px 0;
+    font-size: 2rem;
+    color: #e2e2e2;
+    font-weight: bolder;
+}
+
+.column p{
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.column p:hover{
+    transform: scale(1.2);
+    color: burlywood;
+}
+
+
+.footer-bottom{
+    display: flex;
+}
+
+.social{
+    display: flex;
+    color: white;
+    margin: 40px auto;
+}
+
+.social p{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-right: 8px;
+    color: gold;
+    font-family: 'Oswald', sans-serif ;
+}
+
+.footer-bottom img{
+    width: 50px;
+}
+
+@media screen and (max-width: 850px) {
+
+    footer{
+        height: 60vh;
+    }
+    .columns{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    footer{
+        height: 90vh;
+    }
+    .footer-bottom{
+        flex-direction: column;
+    }
+}
+
+
+/* CSS JS */
+
+.note{
+    position: fixed;
+    top: -10vh;
+    animation: fall 1s linear;
+    font-size: 2rem;
+    transform: translateY(0);
+}
+
+@keyframes fall {
+    to{
+        transform: translateY(50vh);
+    }
+}
+
+
+
+
+
+
+
+ 
+
+
+
