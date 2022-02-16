@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=IBM+Plex+Mono&family=Luxurious+Roman&family=Mochiy+Pop+P+One&family=Neonderthaw&family=Oswald&family=Roboto:wght@900&family=Rubik+Beastly&family=Ubuntu&display=swap');
 
-
-
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 header{
     background-image: url('/assets/images/piano-g1e23bdd6d_1280.jpg');
@@ -10,12 +13,10 @@ header{
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    
 }
 
 nav{
     margin: 50px;
-    
 }
 
 nav ul{
@@ -29,9 +30,12 @@ nav ul li{
     transition: transform 0.3s ease-in;
 }
 
+nav ul li a{
+    text-decoration: none;
+}
+
 nav li:hover{
     transform: scale(0.9);
-
 }
 
 nav span{
@@ -46,16 +50,12 @@ nav span{
 nav span.white{
     color: #F1F1F1;
     background-color: rgba(0, 0, 0, 1);
-
 }
 
 nav span.black{
     color: #000;
     background-color: rgba(255, 255, 255, 1);
-
 }
-
-
 
 header .title{
     position: absolute;
@@ -97,6 +97,7 @@ button{
 .title #btn-black{
     background-color: rgba(0, 0, 0, 0.5);  
     color: #F1F1F1;
+    border: 1px solid #fff;
 }
 
 .title #btn-black:hover{
@@ -108,6 +109,7 @@ button{
 .title #btn-white{
     background-color: rgba(255, 255, 255, 0.5);
     color: #000;
+    border: 1px solid #fff;
 
 }
 
@@ -124,6 +126,11 @@ button{
 @media screen and (max-width: 990px) {
     header li span{
         font-size: 20px;
+
+    }
+
+    button{
+        margin-top: 10px;
     }
 }
 
@@ -139,6 +146,7 @@ button{
     .title span{
         font-size: 9vw;
     }
+
 }
 
 
@@ -158,7 +166,6 @@ section.cards{
     height: 90vh;
 }
 
-
 .threecards{
     display: flex;
     flex-wrap: wrap;
@@ -177,12 +184,6 @@ section.cards{
     text-shadow: 5px 5px 10px black;   
 }
 
-@media screen and (max-width: 375px) {
-    h2{
-        font-size: 25px;
-    }
-}
-
 .card{
     height: 75%;
     width: 300px;
@@ -195,6 +196,7 @@ section.cards{
     backface-visibility: hidden;
     transition: 0.6s ease-in-out;
     cursor: pointer;
+    height: 100%;
 }
 
 .card:hover{
@@ -249,7 +251,7 @@ section.cards{
 
 @media screen and (max-width: 1080px) {
     section.cards{
-        height: 140vh;
+        height: 150vh;
     }
 
     .threecards{
@@ -259,8 +261,12 @@ section.cards{
     section.cards .card{
         margin-top: 20px;
     }
+}
 
-   
+@media screen and (max-width: 375px) {
+    h2{
+        font-size: 25px;
+    }
 }
 
 
@@ -294,13 +300,14 @@ footer{
 .column p.title-footer{
     margin: 25px 0;
     font-size: 2rem;
-    color: #e2e2e2;
+    color: gold;
     font-weight: bolder;
 }
 
 .column p{
     font-size: 1.5rem;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .column p:hover{
